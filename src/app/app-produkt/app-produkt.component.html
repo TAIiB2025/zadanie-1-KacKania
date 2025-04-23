@@ -1,0 +1,26 @@
+<table border="1px" *ngIf="produkt != null" class="produkt" [ngClass]="{'checked': produkt.czyPromocja}">
+    <tr>
+        <th>Nazwa</th>
+        <th>Cena</th>
+        <th>Data utworzenia</th>
+        <th>Dodaj do koszyka</th>
+        <th>Liczba sztuk w koszyku</th>
+    </tr>
+    <tr>
+        <td>
+            {{produkt.nazwa}}
+        </td>
+        <td>
+            {{produkt.cena}}
+        </td>
+        <td>
+            {{produkt.dataUtworzenia.toDateString()}}
+        </td>
+        <td>
+            <button (click)="onDodaj()">Dodaj</button>
+        </td>
+        <td>
+            {{produkt.ilosc}}
+        </td>
+    </tr>
+</table>
